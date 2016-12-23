@@ -11085,6 +11085,8 @@
 					}
 					$(self).attr('data-code', values[values.length - 1]);
 					$(self).attr('data-codes', values.join(','));
+					$(self).data('code', values[values.length - 1]);
+					$(self).data('codes', values.join(','));
 					if (params.onChange) {
 						params.onChange.call(self, picker, values, displayValues);
 					}
