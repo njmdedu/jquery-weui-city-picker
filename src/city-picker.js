@@ -7037,11 +7037,20 @@
 			"code" : "441800",
 			"name" : "清远市"
 		}, {
-			"sub" : [],
+			"sub" : [
+				{
+					"name":"",
+					"code":""
+				}],
 			"code" : "441900",
 			"name" : "东莞市"
 		}, {
-			"sub" : [],
+			"sub" : [
+				{
+					"name":"",
+					"code":""
+				}
+			],
 			"code" : "442000",
 			"name" : "中山市"
 		}, {
@@ -11083,6 +11092,16 @@
 							}
 						}
 					}
+
+					for(var i = 0; i < values.length; i++)
+					{
+							if(values[i] == "" || typeof(values[i]) == "undefined")
+							{
+									 values.splice(i,1);
+									 i= i-1;
+							}
+					}
+
 					$(self).attr('data-code', values[values.length - 1]);
 					$(self).attr('data-codes', values.join(','));
 					$(self).data('code', values[values.length - 1]);
